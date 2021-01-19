@@ -7,18 +7,15 @@
 
 This projects has been developed for school. It basically allows user to find the nearest pharmacies around. It also allows to read and add products that are available in each pharmacy. You can read information, such as:
 - Description
-- Rout of Administration
+- Route of Administration
 - Recomendations
 - Laboratory 
 
 
 ## Installation :rocket:
 
-- First step
-```git remote origin master https://github.com/FernandoDefez/lifevice.git```
-
 - Cloning the repository
-```git clone```
+```git clone https://github.com/FernandoDefez/lifevice.git```
 
 ## Built it with :hammer:
 
