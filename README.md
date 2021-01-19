@@ -8,7 +8,7 @@
 This projects has been developed for school. It basically allows user to find the nearest pharmacies around. It also allows to read and add products that are available in each pharmacy. You can read information, such as:
 - Description
 - Route of Administration
-- Recomendations
+- Recommendations
 - Laboratory 
 
 
