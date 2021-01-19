@@ -84,7 +84,7 @@ if (isset($_SESSION["USERNAME"])) {
                     <?php
                         if (isset($_SESSION["USERNAME"])) {
                             echo "<a href='../settings/settings.php' class='fa fa-user'></a>
-                            <a class='link' href='../../controllers/signoutController/signoutController.php'>Sign Out</a>
+                            <a class='link' href='../controllers/signoutController/signoutController.php'>Sign Out</a>
                             <div class='popup popup-user'>
                                 <p>" . filter_var($_SESSION["USERNAME"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH) . "</p>
                             </div>";
@@ -280,7 +280,7 @@ if (isset($_SESSION["USERNAME"])) {
             <div class="product-card">
                 <div class="product-card-box">
                     <div class="fav">
-                        <a href="../../controllers/favouritesController/favouritesController.php?id=${result[0][i].productId}"class="fa fa-heart"></a>
+                        <a href="../controllers/favouritesController/favouritesController.php?id=${result[0][i].productId}"class="fa fa-heart"></a>
                         <div class="before">
                             <a href="../signin/signin.php" class="btn readmore-button selected">Sign In</a>
                             <a>or</a>

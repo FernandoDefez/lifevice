@@ -27,10 +27,10 @@ $name = $data['USER_FULLNAME'];
 if($data){
     session_start();
     $_SESSION["USERNAME"] = $data['USER_FULLNAME'];
-    header("Location: ../../public/home/home.php?pharmacyId=".$_SESSION["phaId"]."&pharmacyName=".$_SESSION["phaName"]);
+    header("Location: ../../home/home.php?pharmacyId=".$_SESSION["phaId"]."&pharmacyName=".$_SESSION["phaName"]);
 }
 else{
-    header("Location: ../../public/signin/signin.php?message=Usuario no existe");
+    header("Location: ../../signin/signin.php?message=Usuario no existe");
 }
 
 ?>

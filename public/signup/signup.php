@@ -21,7 +21,7 @@ if (isset($_GET["message"])){
     <header>
         <nav>
             <div class="user">
-                <a href='../../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
+                <a href='../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
                 <div class="popup popup-user"><p>Back</p></div>
             </div>
             <div class="logo">
@@ -39,7 +39,7 @@ if (isset($_GET["message"])){
             <div class="box">
                 <div class="row">
                     <!-- Sign Up Form -->
-                    <form action="../../controllers/signupController/signupController.php" method="POST" class="sign-card">
+                    <form action="../controllers/signupController/signupController.php" method="POST" class="sign-card">
                         <div class="title">
                             <h1>Sign Up</h1>
                         </div> 

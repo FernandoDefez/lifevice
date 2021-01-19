@@ -31,16 +31,16 @@
                 $user->setEmail($email);
                 $user->cryptPass($password);
                 if($user->signUp()){
-                    header("Location: ../../public/signin/signin.php");
+                    header("Location: ../../signin/signin.php");
                 }else{
-                    header("Location: ../../public/signup/signup.php?message='Ocurrió un problema al registrarse'");        
+                    header("Location: ../../signup/signup.php?message='Ocurrió un problema al registrarse'");        
                 }
             }
             else{
-                header("Location: ../../public/signup/signup.php?message='Contraseñas no coinciden'");
+                header("Location: ../../signup/signup.php?message='Contraseñas no coinciden'");
             }
         }else{
-            header("Location: ../../public/signup/signup.php?message='Faltó un dato por insertar'");
+            header("Location: ../../signup/signup.php?message='Faltó un dato por insertar'");
         }
     }
 ?>

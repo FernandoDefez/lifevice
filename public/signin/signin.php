@@ -25,7 +25,7 @@ if (isset($_SESSION["USERNAME"])){
     <header>
         <nav>
             <div class="user">
-                <a href='../../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
+                <a href='../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
                 <div class="popup popup-user"><p>Back</p></div>
             </div>
             <div class="logo">
@@ -42,7 +42,7 @@ if (isset($_SESSION["USERNAME"])){
         <section class="container">
             <div class="box">
                 <div class="row">
-                    <form action="../../../controllers/signinController/signinController.php" method="POST" class="sign-card">
+                    <form action="../controllers/signinController/signinController.php" method="POST" class="sign-card">
                         <div class="title"><h1>Sign In</h1></div>
                             <p>E-mail</p>
                         <div class="input-container">
