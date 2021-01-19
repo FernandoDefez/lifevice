@@ -57,7 +57,7 @@ class User {
          *@getConnection() method returns the connection with the db
          *@prepare() method is just from PDO whit our sql statement within
          */
-            $stmt = $this->conn->getConnection()->prepare("INSERT INTO users (USER_FULLNAME, USER_EMAIL, USER_PASSWORD) VALUES(:fullname, :email, :password)");
+            $stmt = $this->conn->getConnection()->prepare("INSERT INTO USERS (USER_FULLNAME, USER_EMAIL, USER_PASSWORD) VALUES(:fullname, :email, :password)");
 
             /*Bind parameters*/
             $stmt->bindParam(':fullname', $this->fullname);
@@ -66,7 +66,7 @@ class User {
 
             /*Execute the statement*/
             $stmt->execute();
-            echo "New records created successfully";
+            return $stmt;
         }catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -77,7 +77,7 @@ class User {
     public function signIn()
     {
         try{
-            $stmt = $this->conn->getConnection()->prepare("SELECT * FROM users WHERE USER_EMAIL = '$this->email' ");
+            $stmt = $this->conn->getConnection()->prepare("SELECT * FROM USERS WHERE USER_EMAIL = '$this->email' ");
             $stmt->execute();
 
             $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

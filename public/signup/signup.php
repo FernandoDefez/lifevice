@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION["USERNAME"])){
-    if (isset($_SESSION["phaId"]) && isset($_SESSION["phaName"])) {
-        header("Location: ../home/home.php?pharmacyId=".$_SESSION["phaId"]."&pharmacyName=".$_SESSION["phaName"]);
-    }
+if (isset($_GET["message"])){
+    echo $_GET["message"];
 }
 ?>
 
@@ -13,6 +11,7 @@ if (isset($_SESSION["USERNAME"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../common/images/pills.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Lifevice</title>
 </head>
@@ -21,11 +20,16 @@ if (isset($_SESSION["USERNAME"])){
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="user"></div>
+            <div class="user">
+                <a href='../../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
+                <div class="popup popup-user"><p>Back</p></div>
+            </div>
             <div class="logo">
                     <h1>Lifevice</h1>
             </div>
-            <div class="heart"></div>
+            <div class="user">
+                <a href="../signin/signin.php" class="btn sign-in-link">Sign In</a>
+            </div>
         </nav>
     </header>
 

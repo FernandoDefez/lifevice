@@ -15,15 +15,10 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'] ? : '';
 }
 
-echo $email;
-echo $password;
-
-
-$login =  new User(new Connection);
-
 /**
  * Log in
 */
+$login =  new User(new Connection);
 $login->setEmail($email);
 $login->setPassword($password);
 $data = $login->signIn();
@@ -32,10 +27,10 @@ $name = $data['USER_FULLNAME'];
 if($data){
     session_start();
     $_SESSION["USERNAME"] = $data['USER_FULLNAME'];
-    header("Location: ../../views/home/home.php?pharmacyId=".$_SESSION["phaId"]."&pharmacyName=".$_SESSION["phaName"]);
+    header("Location: ../../public/home/home.php?pharmacyId=".$_SESSION["phaId"]."&pharmacyName=".$_SESSION["phaName"]);
 }
 else{
-    header("Location: ../../views/signin/signin.php?message=Usuario no existe");
+    header("Location: ../../public/signin/signin.php?message=Usuario no existe");
 }
 
 ?>

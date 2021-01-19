@@ -14,31 +14,33 @@
     $accepted_terms;
 
 
-    if (isset($_POST['submit'])) {
-        $fullname = $_POST['fullname'] ? : '';
-        $email = $_POST['email'] ? : '';
-        $password = $_POST['password'] ? : '';
-        $confirmed_password = $_POST['confirmed_password'] ? : '';
-        $accepted_terms = $_POST['accepted_terms'] ? : 0;
+    if (isset($_POST['submit']))
+    {
+        if (isset($_POST['fullname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmed_password']) && isset($_POST['accepted_terms'])) 
+        {
+            if ($_POST['password'] == $_POST['confirmed_password']) {
+                $fullname = $_POST['fullname'] ? : '';
+                $email = $_POST['email'] ? : '';
+                $password = $_POST['password'] ? : '';
+                $confirmed_password = $_POST['confirmed_password'] ? : '';
+                $accepted_terms = $_POST['accepted_terms'] ? : 0;
+
+                #Signup
+                $user =  new User(new Connection);
+                $user->setFullname($fullname);
+                $user->setEmail($email);
+                $user->cryptPass($password);
+                if($user->signUp()){
+                    header("Location: ../../public/signin/signin.php");
+                }else{
+                    header("Location: ../../public/signup/signup.php?message='Ocurrió un problema al registrarse'");        
+                }
+            }
+            else{
+                header("Location: ../../public/signup/signup.php?message='Contraseñas no coinciden'");
+            }
+        }else{
+            header("Location: ../../public/signup/signup.php?message='Faltó un dato por insertar'");
+        }
     }
-
-    echo $fullname;
-    echo $email;
-    echo $password;
-    echo $confirmed_password;
-    echo $accepted_terms;
-    echo"<br>";
-
-    
-    $user =  new User(new Connection);
-
-    /**
-     * Signup
-    */
-    $user->setFullname($fullname);
-    $user->setEmail($email);
-    $user->cryptPass($password);
-    $user->signUp();
-
-    header("Location: ../../views/signin/signin.php");
 ?>

@@ -16,6 +16,7 @@ if (isset($_SESSION["USERNAME"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../common/images/pills.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Lifevice</title>
 </head>
@@ -24,11 +25,14 @@ if (isset($_SESSION["USERNAME"])){
     <header>
         <nav>
             <div class="user">
-            </div>    
+                <a href='../../controllers/indexController/indexController.php' class='fa fa-arrow-left'></a>
+                <div class="popup popup-user"><p>Back</p></div>
+            </div>
             <div class="logo">
                     <h1>Lifevice</h1>
             </div>
-            <div class="heart">
+            <div class="user">
+                <a href="../signup/signup.php" class="btn sign-in-link">Sign Up</a>
             </div>
         </nav>
     </header>
