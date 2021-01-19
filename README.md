@@ -1,7 +1,10 @@
 # Liifevice :pill: 
 
 This projects has been developed for school. It basically allows user to find the nearest pharmacies around. It also allows to see what products are available in each pharmacy.
-
+![](https://img.shields.io/github/issues/FernandoDefez/lifevice)
+![](https://img.shields.io/github/forks/FernandoDefez/lifevice)
+![](https://img.shields.io/github/stars/FernandoDefez/lifevice)
+![](https://img.shields.io/github/license/FernandoDefez/lifevice)
 
 ## Installation :rocket:
 
@@ -38,4 +41,4 @@ This projects has been developed for school. It basically allows user to find th
 
 
 #
-with :heart: by [FernandoDefez](https://github.com/FernandoDefez)
+with :heart: from [FernandoDefez](https://github.com/FernandoDefez)
