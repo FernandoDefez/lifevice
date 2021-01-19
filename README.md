@@ -19,7 +19,7 @@ This projects has been developed for school. It basically allows user to find th
 
 ## Built it with :hammer:
 
-- [Leaflet](https://www.inegi.org.mx/servicios/api_denue.html) :earth_americas:
+- [Leaflet](https://leafletjs.com) :earth_americas:
 
 - [Api Denue](https://www.inegi.org.mx/servicios/api_denue.html) :convenience_store:
 
