@@ -13,19 +13,19 @@ This projects has been developed for school. It basically allows user to find th
 
 ## Built it with :hammer:
 
-- [Leaflet](https://www.inegi.org.mx/servicios/api_denue.html) ::
+- [Leaflet](https://www.inegi.org.mx/servicios/api_denue.html) :earth_americas:
 
-- [Api Denue](https://www.inegi.org.mx/servicios/api_denue.html) :engine:
+- [Api Denue](https://www.inegi.org.mx/servicios/api_denue.html) :convenience_store:
 
 
-## First look
+## First look 
 
 ![](https://github.com/FernandoDefez/lifevice/blob/master/public/common/images/index.png)
 
 
 ## Institue :school:
 
-![Instituto Tecnológico de Cancún](https://www.cancun.tecnm.mx)
+[Instituto Tecnológico de Cancún](https://www.cancun.tecnm.mx)
 
 
 ## Thanks to :thumbsup:
@@ -36,4 +36,6 @@ This projects has been developed for school. It basically allows user to find th
 - Gabriel Soberanis
 - Kiara Xool
 
+
+#
 with :heart: by [FernandoDefez](https://github.com/FernandoDefez)
