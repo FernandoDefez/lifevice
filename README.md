@@ -1,28 +1,31 @@
-# Liifevice :ambulance: 
+# Liifevice :pill: 
 
 This projects has been developed for school. It basically allows user to find the nearest pharmacies around. It also allows to see what products are available in each pharmacy.
 
 
 ## Installation :rocket:
 
+- First step
+```git remote origin master https://github.com/FernandoDefez/lifevice.git```
+
 - Cloning the repository
-`git remote origin master https://github.com/FernandoDefez/lifevice.git`
-`git clone`
+```git clone```
 
 ## Built it with :hammer:
 
 - [Leaflet](https://www.inegi.org.mx/servicios/api_denue.html) ::
 
-- [Api Denue](https://www.inegi.org.mx/servicios/api_denue.html) :map:
+- [Api Denue](https://www.inegi.org.mx/servicios/api_denue.html) :engine:
+
 
 ## First look
 
-![alt text](https://github.com/FernandoDefez/lifevice/blob/master/public/common/images/index.png)
+![](https://github.com/FernandoDefez/lifevice/blob/master/public/common/images/index.png)
 
 
 ## Institue :school:
 
-- https://www.cancun.tecnm.mx
+![Instituto Tecnológico de Cancún](https://www.cancun.tecnm.mx)
 
 
 ## Thanks to :thumbsup:
