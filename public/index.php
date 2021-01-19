@@ -142,20 +142,7 @@
         }
 
         async function getPharmaciesFromOurDatabase(path) {
-            /*let http = new XMLHttpRequest();
-            http.onreadystatechange = await function() 
-            {
-                if (this.readyState == 4 && this.status == 200) {
-                    data=JSON.parse(this.responseText);
-                    console.log(data);
-                    return data;
-                }
-            };
-            http.open("GET", path, true);
-            http.send();
-            */
-
-            let myObject = await fetch(path);
+            let myObject = await fetch(path, {'mode': 'cors'});
             let myText = await myObject.text();
             data=JSON.parse(myText);
             return data;
