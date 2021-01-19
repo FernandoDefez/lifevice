@@ -142,6 +142,19 @@
         }
 
         async function getPharmaciesFromOurDatabase(path) {
+            /*let http = new XMLHttpRequest();
+            http.onreadystatechange = await function() 
+            {
+                if (this.readyState == 4 && this.status == 200) {
+                    data=JSON.parse(this.responseText);
+                    console.log(data);
+                    return data;
+                }
+            };
+            http.open("GET", path, true);
+            http.send();
+            */
+
             let myObject = await fetch(path);
             let myText = await myObject.text();
             data=JSON.parse(myText);
@@ -149,7 +162,7 @@
         }
 
         function getAnArrayOfThePharmaciesId() {
-            let res = getPharmaciesFromOurDatabase("../../../farmacias/index.php?pharmacies=all");
+            let res = getPharmaciesFromOurDatabase("https://polar-earth-09217.herokuapp.com/index.php?pharmacies=all");
             let temp = Array();
             res.then((value) =>{
                 for (let index = 0; index < value[0].length; index++) {
