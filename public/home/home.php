@@ -234,7 +234,7 @@ if (isset($_SESSION["USERNAME"])) {
                 }
             }
         }
-        http.open("GET", "../../../farmacias/index.php?pharmacyId="+getPharmacyId.innerText, true);
+        http.open("GET", "https://polar-earth-09217.herokuapp.com/index.php?pharmacyId="+getPharmacyId.innerText, true);
         http.send();
         setAllProducts();
     }
@@ -255,7 +255,7 @@ if (isset($_SESSION["USERNAME"])) {
             let result = JSON.parse(this.responseText);
             showProducts(result);
         };
-        http.open("GET", "../../../farmacias/index.php?selectedCategory="+category+"&id="+getPharmacyId.innerText, true);
+        http.open("GET", "https://polar-earth-09217.herokuapp.com/index.php?selectedCategory="+category+"&id="+getPharmacyId.innerText, true);
         http.send();
     }
 
@@ -266,7 +266,7 @@ if (isset($_SESSION["USERNAME"])) {
             let result = JSON.parse(this.responseText);
             showProducts(result);
         };
-        http.open("GET", "../../../farmacias/index.php?selectedCategory=all&id="+getPharmacyId.innerText, true);
+        http.open("GET", "https://polar-earth-09217.herokuapp.com/index.php?selectedCategory=all&id="+getPharmacyId.innerText, true);
         http.send();
     }
 
@@ -325,7 +325,7 @@ if (isset($_SESSION["USERNAME"])) {
                 }
             }
         }
-        http.open("GET","../../../farmacias/index.php?search="+str+"&phaId="+ getPharmacyId.innerText,true);
+        http.open("GET","https://polar-earth-09217.herokuapp.com/index.php?search="+str+"&phaId="+ getPharmacyId.innerText,true);
         http.send();
     }
 
