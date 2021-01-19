@@ -42,7 +42,7 @@ if (isset($_SESSION["USERNAME"])){
         <section class="container">
             <div class="box">
                 <div class="row">
-                    <form action="../../controllers/signinController/signinController.php" method="POST" class="sign-card">
+                    <form action="../../../controllers/signinController/signinController.php" method="POST" class="sign-card">
                         <div class="title"><h1>Sign In</h1></div>
                             <p>E-mail</p>
                         <div class="input-container">
