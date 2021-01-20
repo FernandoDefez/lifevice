@@ -14,8 +14,16 @@
 <header>
         <nav>
             <div class="user">
-                    <a href="../settings/settings.php" class="fa fa-user"></a>
-                    <div class="popup popup-user"><p>User</p></div>
+                    <?php
+                        session_start();
+                        if (isset($_SESSION["USERNAME"])) {
+                            echo "<a href='../settings/settings.php' class='fa fa-user'></a>
+                            <a class='link' href='../controllers/signoutController/signoutController.php'>Sign Out</a>
+                            <div class='popup popup-user'>
+                                <p>" . filter_var($_SESSION["USERNAME"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH) . "</p>
+                            </div>";
+                        }
+                    ?>
             </div>    
             <div class="logo">
                     <h1>Lifevice</h1>
@@ -37,10 +45,9 @@
             <div class="box">
                 <div class="row routes">
                     <div class="route">
-                        <a href="" class="link">Farmacia YZA</a> >> <a href="" class="link" id="pharmacyAddress">Favoritos</a>
                     </div>
                     <div class="back-to-map">
-                        <a class="" href="../index.php"><span class=" fa fa-arrow-left"></span> Products</a>
+                        <a href='../controllers/indexController/indexController.php'><span class=" fa fa-arrow-left"></span> Products</a>
                      </div>
                 </div>
 
