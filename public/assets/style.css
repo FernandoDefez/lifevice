@@ -440,11 +440,26 @@ img{
     display: none;
     text-align: center;
 }
+
+.map-container{
+    position: absolute;
+    top: 30vh;
+    height: 35vh;
+    display: flex;
+    width: 100%;
+}
+
+.map-logo{
+    width: 220px;
+    height: 220px;
+    margin: auto;
+}
+
 #loader {
     z-index: 1;
     width: 80px;
     height: 80px;
-    border: 14px solid #f3f3f3;
+    border: 14px solid #ffffff;
     border-radius: 50%;
     margin: auto;
     border-top: 14px solid var(--blue);

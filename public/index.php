@@ -12,6 +12,11 @@
     </head>
 
     <body>
+        <div class="map-container" id="map-container">
+            <div class="map-logo">
+                <img src="common/images/map.svg" alt="">
+            </div>
+        </div>
         <div class="loader-container" id="loader-container">
             <div id="loader"></div>
         </div>
@@ -32,7 +37,7 @@
                     <div class="row" id="mapid">
                     </div>
                     <div class="map-actions">
-                        <button class="btn" onclick="getMyLocation()">Find The Nearest Pharmacies</button>
+                        <button class="btn" onclick="getMyLocation()">Find Pharmacies</button>
                     </div>
                     <div class="row reset-map">
                         <a href="" class="link">reset map</a>
@@ -62,6 +67,7 @@
         var mts = "4000";
         var mymap = document.getElementById("mapid");
         var loader = document.getElementById("loader-container");
+        var mapLogo = document.getElementById("map-container");
         const urlDenue = "https://www.inegi.org.mx/app/api/denue/v1/consulta/buscar/farmacias/";
         const token = "faee2e38-1c98-4b7a-b093-8255fbe33dd6";
 
@@ -76,6 +82,7 @@
         function showMap(position){
             let url = `${urlDenue}${position.coords.latitude},${position.coords.longitude}/${mts}/${token}`;
             let array = getAnArrayOfThePharmaciesId();
+            mapLogo.style.display = "none";
             loader.style.display = "block";
             let response = getTheNearestPharmacies(url);
                 response.then((value)=>{ 
